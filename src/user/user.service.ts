@@ -33,4 +33,10 @@ export class UserService {
       throw error;
     }
   }
+
+  async getUserById(id: string) {
+    const user = await this.userModel.findById(id);
+
+    return user;
+  }
 }
